@@ -10,5 +10,3 @@
 
 
 ## Contributors
-
-- CodingIsLove
