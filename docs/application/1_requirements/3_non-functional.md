@@ -1,5 +1,7 @@
 # Non-Functional Requirements
 
+## Interface
+- [ ] Interface should be CLI based
 
 ## Code Quality
 
@@ -8,7 +10,6 @@
   - [ ] This should be enforced by pre-commits
   - [ ] This should be enforced by Github actions
   - [ ] Use Prettier + ESLint to enforce
-
 
 ## Security
 
@@ -28,3 +29,7 @@
 - [ ] Movie Roulett is containerized via Docker
   - [ ] Available in Dockerhub
   - [ ] Dockerimages are tagged in an understandable manner
+
+## Disaster Recovery
+
+- [ ] Movie Roulett should do snapshots/backups on a regular basis

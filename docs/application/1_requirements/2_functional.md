@@ -1,13 +1,17 @@
 # Functional Requirements
 
-## Must requirements
+## MVP
+### Must requirements
 
-- [ ] Movie roulett must have a database with at least 100 Movie titles
-- [ ] Movie roulett must have a database with at least 100 Movie titles
-- [ ] Movie roulett must have a possibility to add a new movie to the database
-- [ ] Movie roulett must have a possibility to remove a movie from the database
+- [ ] Movie roulett must have a list with at least 100 Movie titles
 - [ ] Movie roulett must have a possibility to give you a random movie title out of the database
 
-## Should requirements
+## After MVP
 
-- [ ]
+### Must requirements
+- [ ] Movie roulett must store it's movies in a database
+- [ ] Movie roulett must provide CRUD operations over the movie list
+- [ ] Movie roulett must have possibility to backup / take a snapshot of the Movie database
+- [ ] If a movie has already been shown, it will be remove of the current instance of the Movie roulett
+
+### Should requirements
