@@ -1,0 +1,25 @@
+{
+  "name": "devopsblog",
+  "version": "1.0.0",
+  "description": "## What is this repository about?",
+  "main": "main.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TAAGECH9/DevOpsBlog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TAAGECH9/DevOpsBlog/issues"
+  },
+  "homepage": "https://github.com/TAAGECH9/DevOpsBlog#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
