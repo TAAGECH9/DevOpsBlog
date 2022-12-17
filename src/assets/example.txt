@@ -1,0 +1,14 @@
+
+
+Governance
+AzureAD
+M365
+O365
+URL monitoring
+VM in scope
+    - Windows
+        - Security in Scope
+    - Linux
+PaaS Solutions
+    - Keyvaults
+    

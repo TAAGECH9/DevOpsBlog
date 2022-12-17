@@ -3,26 +3,16 @@
  */
 
 import inquirer from 'inquirer';
-import { configs } from './categories.js';
+import * as questionary from './prompts/questions.js'
 
 
 inquirer
   .prompt([
-{
-      type: 'checkbox',
-      message: 'Select toppings',
-      name: 'toppings',
-      choices: [
-        new inquirer.Separator(' = The Meats = '),
-        ...configs
-      ],
-      validate(answer:any) {
-        if (answer.length < 1) {
-          return 'You must choose at least one configuration';
-        }
-        return true;
-      },
-    },
+    questionary.GeneralPrompt,
+    questionary.VmPrompt,
+    questionary.WindowsSecPrompt,
+    questionary.IsPaasInScope,
+    questionary.PaasConfigs
   ])
   .then((answers) => {
     console.log(JSON.stringify(answers, null, '  '));
