@@ -3,24 +3,25 @@
  */
 
 import inquirer from 'inquirer';
+import { configs } from './categories.js';
+
 
 inquirer
   .prompt([
-    {
-      type: 'list',
-      name: 'theme',
-      message: 'What do you want to do?',
+{
+      type: 'checkbox',
+      message: 'Select toppings',
+      name: 'toppings',
       choices: [
-        'Order a pizza',
-        'Make a reservation',
-        new inquirer.Separator(),
-        'Ask for opening hours',
-        {
-          name: 'Contact support',
-          disabled: 'Unavailable at this time',
-        },
-        'Talk to the receptionist',
+        new inquirer.Separator(' = The Meats = '),
+        ...configs
       ],
+      validate(answer:any) {
+        if (answer.length < 1) {
+          return 'You must choose at least one configuration';
+        }
+        return true;
+      },
     },
   ])
   .then((answers) => {
