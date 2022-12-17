@@ -1,29 +1,34 @@
-/**
- * List prompt example
- */
 
-import inquirer from 'inquirer';
-import { configs } from './categories.js';
+import * as readline from 'node:readline/promises'
+import { stdin as input, stdout as output } from 'node:process'
+
+let exit = false
+let movieLibrary = ["Zoolander", "Crank", "Pitch Perfect", "Nutty Professor", "Lion King"]
+
+const randomMovie = function () {
+  return movieLibrary[Math.floor(Math.random() * movieLibrary.length)]
+}
+
+const main = async function () {
+  while (!exit) {
+    console.clear()
+    console.log('------------- Roulett says -------------')
+    console.log(randomMovie())
+    console.log('----------------------------------------\n')
+    exit = await anotherOne()
+  }
+}
+
+const anotherOne = async function () {
+  const rl = readline.createInterface({ input, output });
+  const answer = await rl.question("Another Movie tipp? (y/n)\n");
+  rl.close();
+  if (answer == 'y') {
+    return false
+  } else {
+    return true
+  }
+}
 
 
-inquirer
-  .prompt([
-{
-      type: 'checkbox',
-      message: 'Select toppings',
-      name: 'toppings',
-      choices: [
-        new inquirer.Separator(' = The Meats = '),
-        ...configs
-      ],
-      validate(answer:any) {
-        if (answer.length < 1) {
-          return 'You must choose at least one configuration';
-        }
-        return true;
-      },
-    },
-  ])
-  .then((answers) => {
-    console.log(JSON.stringify(answers, null, '  '));
-  });
+main()
