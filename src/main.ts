@@ -1,6 +1,8 @@
 
 import * as readline from 'node:readline/promises'
 import { stdin as input, stdout as output } from 'node:process'
+import * as fs from 'node:fs/promises';
+
 
 let exit = false
 let movieLibrary = ["Zoolander", "Crank", "Pitch Perfect", "Nutty Professor", "Lion King"]
@@ -29,6 +31,5 @@ const anotherOne = async function () {
     return true
   }
 }
-
 
 main()

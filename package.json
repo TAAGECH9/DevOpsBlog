@@ -9,7 +9,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "tsc && node dist/main.js"
+    "dev": "tsc && node dist/csv_example.js",
+    "copy-files": "cp -r ./src/assets ./dist/assets "
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/TAAGECH9/DevOpsBlog#readme",
   "devDependencies": {
     "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.11.17",
     "typescript": "^4.9.4"
   },
   "dependencies": {
