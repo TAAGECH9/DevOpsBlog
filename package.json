@@ -9,7 +9,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "tsc && node dist/csv_example.js",
+    "dev": "tsc && node dist/main.js",
     "copy-files": "cp -r ./src/assets ./dist/assets "
   },
   "repository": {

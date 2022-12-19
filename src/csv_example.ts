@@ -1,13 +1,15 @@
 import { readFile } from 'fs/promises'
 
-let movieList: [string]
+let movieList: string[]
 
 try {
     const filePath = new URL('./assets/movies.csv', import.meta.url)
     console.log("Blablablabla")
     let content = await readFile(filePath, { encoding: 'utf8' })
-
-    console.log(content)
+    movieList = content.split('\n')
+    console.log(movieList)
 } catch (err: any) {
     console.log(`Some weird error apperared ${err.msg}`)
 }
+
+export { movieList }

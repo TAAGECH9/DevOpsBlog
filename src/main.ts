@@ -1,14 +1,13 @@
 
 import * as readline from 'node:readline/promises'
 import { stdin as input, stdout as output } from 'node:process'
-import * as fs from 'node:fs/promises';
+import { movieList } from './csv_example.js';
 
 
 let exit = false
-let movieLibrary = ["Zoolander", "Crank", "Pitch Perfect", "Nutty Professor", "Lion King"]
 
 const randomMovie = function () {
-  return movieLibrary[Math.floor(Math.random() * movieLibrary.length)]
+  return movieList[Math.floor(Math.random() * movieList.length)]
 }
 
 const main = async function () {
