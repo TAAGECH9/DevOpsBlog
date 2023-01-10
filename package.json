@@ -9,8 +9,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "tsc && node dist/main.js",
-    "copy-files": "cp -r ./src/assets ./dist/assets "
+    "dev": "npm run clean && npm run copy-files && tsc && node dist/main.js",
+    "copy-files": "mkdir -p ./dist && cp -r ./src/assets ./dist/assets",
+    "clean": "rimraf dist"
   },
   "repository": {
     "type": "git",
